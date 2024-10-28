@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #FF0000;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            color: white;
+            gap: 10px;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .search-container {
+            display: flex;
+            width: 80%;
+            max-width: 300px;  
+            margin: 0 10px; 
+        }
+        header input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 2px 0 0 2px;
+            outline: none;
+        }
+        header .search-button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        header .user-icon {
+            width: 35px;
+            height: 35px;
+            background-color: #ddd;
+            border-radius: 50%;
+        }
+         .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+              position: relative;
+              width: 100px;
+               max-width: 100px;
+              padding- bottom: 56.25%;
+              position: absolute;
+        }
+         .video-container iframe {
+            position: absolute;
+            top: 80px;
+            left: 250px;
+            width: 80%;
+            height: 60%;
+            border: 50px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px 0;
+            color: #333;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .main-content {
+            padding: 20px;
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        .video-thumbnail {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+        .video-thumbnail img {
+            width: 100%;
+            display: block;
+        }
+        .video-info {
+            padding: 25px;
+        }
+        .video-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 5px ;
+            color: #333;
+        }
+        .video-channel {
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">YouTube</div>
+    <input type="text" placeholder="Search">
+    <button class="search-button">Search</button>
+    <div class="user-icon"></div>
+</header>
+
+<div class="container">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <a href="#">Home</a>
+        <a href="#">Trending</a>
+        <a href="#">Subscriptions</a>
+        <a href="#">Library</a>
+        <a href="#">History</a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <!--div class="main-content">
+        <!-- Sample video thumbnail -->
+        <!--div class="video-thumbnail">
+            <img src="https://via.placeholder.com/200x120" alt="Video Thumbnail">
+            <div class="video-info">
+                <div class="video-title">Sample Video Title</div>
+                <div class="video-channel">Channel Name • 1M views • 1 week ago</div>
+            </div>
+        </div>
+        <!-- Repeat similar blocks for more video thumbnails -->
+    </div>
+    <div class="video-container">
+        <iframe width="560" height="315" 
+            src="Butterfly.mp4" 
+            title="YouTube video player" frameborder="10px" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+</div>
+
+</body>
+</html>
+
+
